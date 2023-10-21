@@ -1,4 +1,4 @@
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 const expenses = [
   {
@@ -22,8 +22,19 @@ const expenses = [
   },
 ];
 
+function getExpenceObj(obj) {
+  const finalObj = {
+    ...obj,
+  };
+  console.log(finalObj);
+}
+
 function App() {
-  return <Expenses expenses={expenses} />;
+  return (
+    <div>
+      <Expenses expenses={expenses} getExpenceObj={getExpenceObj} />;
+    </div>
+  );
 }
 
 export default App;

@@ -1,0 +1,10 @@
+.new_expense_container {
+  background-color: blueviolet;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+form label {
+  color: white;
+  font-weight: 600;
+}
