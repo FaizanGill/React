@@ -1,0 +1,9 @@
+.ExpenseItem_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: beige;
+  padding: 7px;
+}
