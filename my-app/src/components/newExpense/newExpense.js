@@ -5,7 +5,7 @@ function newExpense(prop) {
     const finalObj = {
       ...obj,
     };
-    prop.getExpenceObj(finalObj);
+    prop.onAddingNewObj(finalObj);
   }
 
   return (

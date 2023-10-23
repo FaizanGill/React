@@ -1,5 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
-
+import { useState } from "react";
+import "./App.css";
 const expenses = [
   {
     id: "e1",
@@ -22,17 +23,23 @@ const expenses = [
   },
 ];
 
-function getExpenceObj(obj) {
-  const finalObj = {
-    ...obj,
-  };
-  console.log(finalObj);
-}
-
 function App() {
+  // const [newExpense, setNewExpense] = useState("");
+  const [expense, setExpense] = useState(expenses);
+  function getExpenceObj(obj) {
+    const finalObj = {
+      ...obj,
+    };
+    // const latest = finalObj;
+    console.log(finalObj);
+    setExpense((prevExpenses) => [finalObj, ...prevExpenses]);
+    console.log(expense);
+    // setExpense(expense.push(latest));
+    // return finalObj;
+  }
   return (
     <div>
-      <Expenses expenses={expenses} getExpenceObj={getExpenceObj} />;
+      <Expenses expenses={expense} onAddNewExpense={getExpenceObj} />
     </div>
   );
 }

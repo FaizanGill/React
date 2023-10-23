@@ -6,3 +6,10 @@
   max-width: 95%;
   border-radius: 15px;
 }
+.para {
+  color: white;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}

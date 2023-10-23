@@ -5,6 +5,17 @@
   margin-bottom: 20px;
 }
 form label {
-  color: white;
+  color: black;
   font-weight: 600;
+}
+label,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }

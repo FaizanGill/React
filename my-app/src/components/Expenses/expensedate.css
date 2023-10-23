@@ -15,6 +15,10 @@
 .expense-date__day {
   color: white;
 }
+.expense-date__day {
+  font-weight: 700;
+  font-size: 22px;
+}
 .title {
   color: black;
 }
