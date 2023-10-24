@@ -1,12 +1,12 @@
 import "./expenses.css";
 import NewExpense from "../newExpense/newExpense";
-// import ExpenseItem from "./ExpenseItem";
+
 import YearFilter from "../Filter/filterByYear";
 import ExpenseList from "./expenseList";
 import { useState } from "react";
-// import filterByYear from "../Filter/filterByYear";
+import ExpenseChart from "./ExpenseChart";
+
 function Expenses(prop) {
-  // const newarr = prop.expenses.filter((expense) => expense.amount > 400); //Filters the expenses
   function newexpense(newExpenseobj) {
     prop.onAddNewExpense(newExpenseobj);
   }
@@ -34,11 +34,8 @@ function Expenses(prop) {
     <div className="expenses_wrapper">
       <NewExpense onAddingNewObj={newexpense} />
       <YearFilter selectedYearFunc={getSelectedYear} />
+      <ExpenseChart filteredExpense={filteredExpenses} />
       <ExpenseList filteredExpense={filteredExpenses} />
-      {/* {expenseToShow} */}
-      {/* {filteredExpenses.map((expense, index) => (
-        <ExpenseItem key={index} data={expense}></ExpenseItem>
-      ))} */}
     </div>
   );
 }
