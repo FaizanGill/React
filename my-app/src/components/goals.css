@@ -1,0 +1,12 @@
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* .goals,
+.newGoal {
+  display: flex;
+
+  flex-direction: column;
+} */
