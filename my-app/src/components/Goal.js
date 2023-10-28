@@ -1,7 +1,7 @@
 import "./goal.css";
 function Goal(props) {
   function HandleClick(event) {
-    console.log(event.target.innerHTML);
+    props.removeGoal(event.target.innerText);
   }
   return (
     <div onClick={HandleClick} className="goal">

@@ -11,9 +11,16 @@ function App() {
     setMyGoals((prevGoals) => [newGoal, ...prevGoals]);
   }
 
+  function removeGoal(removeIt) {
+    const goalsAfterDeletion = myGoals.filter(function (goal) {
+      return goal.des !== removeIt;
+    });
+    setMyGoals(goalsAfterDeletion);
+  }
+
   return (
     <div className="mainContainer">
-      <Goals goals={myGoals} getNewGoal={getNewGoal} />
+      <Goals goals={myGoals} getNewGoal={getNewGoal} removeGoal={removeGoal} />
     </div>
   );
 }

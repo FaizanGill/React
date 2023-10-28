@@ -5,14 +5,17 @@ function Goals(props) {
   function getNewGoal1(newGoal) {
     props.getNewGoal(newGoal);
   }
+  function removeGoal1(removeIt) {
+    props.removeGoal(removeIt);
+  }
   return (
     <div className="innerContainer">
       <div>
-        <NewGoal getNewGoal={getNewGoal1} />
+        <NewGoal getNewGoal={getNewGoal1} removeGoal={removeGoal1} />
       </div>
       <div className="goals">
-        {props.goals.map((goal) => (
-          <Goal goal={goal} />
+        {props.goals.map((goal, index) => (
+          <Goal goal={goal} index={index + 1} removeGoal={removeGoal1} />
         ))}
       </div>
     </div>
