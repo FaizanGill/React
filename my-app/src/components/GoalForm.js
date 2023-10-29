@@ -32,13 +32,10 @@ function GoalForm(props) {
   }
 
   return (
-    <div className="goalForm">
+    <div className={`goalForm ${isValid ? "" : "invalid"}`}>
       <form onSubmit={handleFormSubmit}>
-        <label style={{ color: isValid ? "black" : "red", outline: "none" }}>
-          Course Goal
-        </label>
+        <label>Course Goal</label>
         <input
-          style={{ borderColor: isValid ? "black" : "red" }}
           type="text"
           name="desc"
           value={input}
