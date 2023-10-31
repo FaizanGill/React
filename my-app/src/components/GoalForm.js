@@ -1,4 +1,4 @@
-import "./goalForm.css";
+import styles from "./goalForm.module.css";
 import { useState } from "react";
 
 function GoalForm(props) {
@@ -32,7 +32,7 @@ function GoalForm(props) {
   }
 
   return (
-    <div className={`goalForm ${isValid ? "" : "invalid"}`}>
+    <div className={`${styles.goalForm} ${isValid ? "" : styles.invalid}`}>
       <form onSubmit={handleFormSubmit}>
         <label>Course Goal</label>
         <input
