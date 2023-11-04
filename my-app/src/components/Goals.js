@@ -10,7 +10,7 @@ function Goals(props) {
   }
   return (
     <div className="innerContainer">
-      <div>
+      <div className="newgoal">
         <NewGoal getNewGoal={getNewGoal1} removeGoal={removeGoal1} />
       </div>
       <div className="goals">

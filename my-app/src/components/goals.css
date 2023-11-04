@@ -3,6 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.innerContainer .newgoal {
+  width: 90%;
+}
+.innerContainer .goals {
+  width: 100%;
 }
 /* .goals,
 .newGoal {
